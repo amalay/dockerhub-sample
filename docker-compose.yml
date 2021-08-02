@@ -1,10 +1,11 @@
 version: "3"
 services:
         app:
-            container_name: avcon-node-simple     
-            image: avimg-node-simple       
+            container_name: avcon-dockerhub-sample
+            image: avimg-dockerhub-sample       
             restart: always
             build: .
+            env_file: ./.env
             ports:
-              - "5000:5000"            
+              - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT      
         

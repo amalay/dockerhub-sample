@@ -1,5 +1,5 @@
 {
-  "name": "poc_003",
+  "name": "dockerhub-sample",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",

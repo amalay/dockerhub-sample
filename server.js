@@ -4,9 +4,6 @@ const path = require('path');
 
 const app = express();
 
-// Setup server port
-const port = process.env.PORT || 5000;
-
 //Override default view engine.
 app.set('view engine', 'ejs');
 
@@ -25,6 +22,6 @@ app.get('/', (req, res) => {
 
 require('./app/routes/authRoutes')(app);
 
-app.listen(port, () => {
-    console.log(`Server is listening on port ${port}`);
+app.listen(process.env.NODE_DOCKER_PORT, () => {
+    console.log(`Server is listening on port ${process.env.NODE_DOCKER_PORT}`);    
 });
