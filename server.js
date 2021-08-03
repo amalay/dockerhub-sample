@@ -22,6 +22,10 @@ app.get('/', (req, res) => {
 
 require('./app/routes/authRoutes')(app);
 
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+
 app.listen(process.env.NODE_DOCKER_PORT, () => {
     console.log(`Server is listening on port ${process.env.NODE_DOCKER_PORT}`);    
 });
