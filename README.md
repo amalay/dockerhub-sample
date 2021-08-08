@@ -187,4 +187,9 @@ jobs:
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
 ```
-4. Checked-in to your github repository.
+
+4. Define belwo key in your repository by navigating as (Your repository ----> settings ----> secrets ----> New Repository Secret then add your key and value.
+```
+PAT to hold your github personal access token (PAT) so that this key can be utilised to connect with your Github Container Registry to publish the image.
+```
+5. Checked-in to your github repository.
